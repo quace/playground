@@ -36,10 +36,13 @@ func main() {
 		fmt.Println(bs)
 	}
 
+	http.HandleFunc("/", handlerFunc)
+	http.ListenAndServe("localhost:3000", nil)
+
 }
 
-func MakeRequest() {
-	resp, err := http.Get("https://httpbin.org/get")
+func MakeRequest(url string) {
+	resp, err := http.Get(url)
 	if err != nil {
 		log.Fatalln(err)
 	}
@@ -49,5 +52,9 @@ func MakeRequest() {
 		log.Fatalln(err)
 	}
 
-	log.Println(body)
+	log.Println(string(body))
+}
+
+func handlerFunc(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprint(w, "<h1>Welcome to my awesome site!</h1>")
 }
