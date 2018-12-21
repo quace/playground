@@ -1,0 +1,5 @@
+stderr: FindFirstFile main.go: The system cannot find the file specified.
+, cmd err: exit status 1stderr: FindFirstFile main.go: The system cannot find the file specified.
+, cmd err: exit status 1stderr: FindFirstFile main.go: The system cannot find the file specified.
+, cmd err: exit status 1stderr: FindFirstFile main.go: The system cannot find the file specified.
+, cmd err: exit status 1
